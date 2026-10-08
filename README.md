@@ -236,14 +236,14 @@
     <section class="hero">
         <h1>Nur Khodijah Amelia</h1>
         <h3>S1 Sistem Informasi | Universitas Gunadarma</h3>
-        <p>Mahasiswa Sistem Informasi dengan IPK 3.83 dan latar belakang Teknik Komputer dan Jaringan. Memiliki keahlian teknis dalam pemrograman Java, database SQL, administrasi data, hingga perakitan hardware dan jaringan.</p>
+        <p>Mahasiswa aktif Sistem Informasi dengan IPK 3.83. Aktif dalam kegiatan akademik kampus serta organisasi luar kampus Generasi Energi Bersih. Memiliki latar belakang TKJ dengan keahlian Java, SQL, administrasi data, hingga perakitan hardware dan jaringan.</p>
         <a href="#contact" class="btn">Hubungi Saya</a>
     </section>
 
     <section id="about">
         <h2 class="section-title">Tentang Saya</h2>
         <div style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
-            <p>Memiliki pengalaman langsung melalui program Praktik Kerja Lapangan (PKL) di Singa Asia - Harco Mangga Dua dalam bidang administrasi, teknisi perangkat keras, dan layanan pelanggan. Aktif dalam organisasi sekolah sebagai Pengurus OSIS yang mengasah kemampuan kepemimpinan, komunikasi, dan kerja sama tim. Merupakan pribadi yang teliti, bertanggung jawab, komunikatif, dan siap memberikan kontribusi terbaik.</p>
+            <p>Mahasiswa yang aktif mengembangkan diri melalui kegiatan kampus dan jejaring organisasi luar kampus. Berpengalaman dalam program Praktik Kerja Lapangan (PKL) di Singa Asia - Harco Mangga Dua pada bidang administrasi, teknisi hardware, dan customer service. Memiliki jiwa kepemimpinan, kerja sama tim, serta kepedulian terhadap isu keberlanjutan dan keberdaya pemuda.</p>
         </div>
     </section>
 
@@ -254,7 +254,7 @@
                 <i class="fa-solid fa-graduation-cap"></i>
                 <h3>Universitas Gunadarma</h3>
                 <h4>S1 Sistem Informasi (2024 - Present)</h4>
-                <p>IPK: 3.83 / 4.00</p>
+                <p>IPK: 3.83 / 4.00 | Aktif dalam berbagai kegiatan akademik dan keorganisasian kampus.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-school"></i>
@@ -276,6 +276,7 @@
             <span class="skill-badge">Infrastruktur Jaringan</span>
             <span class="skill-badge">Visual Studio Code</span>
             <span class="skill-badge">Customer Service</span>
+            <span class="skill-badge">Manajemen Kegiatan & Organisasi</span>
         </div>
     </section>
 
@@ -283,13 +284,23 @@
         <h2 class="section-title">Pengalaman Kerja & Organisasi</h2>
         <div class="grid">
             <div class="card">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Generasi Energi Bersih</h3>
+                <h4>Anggota / Relawan Aktif (Present)</h4>
+                <ul>
+                    <li>Aktif berkontribusi dalam jaringan organisasi pemuda isu energi terbarukan dan lingkungan.</li>
+                    <li>Mengikuti serta mendukung kampanye publik, edukasi, dan program advokasi transisi energi bersih.</li>
+                    <li>Membangun kolaborasi jejaring dengan pemuda antar-kampus dan komunitas lingkungan.</li>
+                </ul>
+            </div>
+            <div class="card">
                 <i class="fa-solid fa-briefcase"></i>
                 <h3>Praktik Kerja Lapangan (PKL)</h3>
                 <h4>Singa Asia - Harco Mangga Dua (Jan - Apr 2023)</h4>
                 <ul>
-                    <li><strong>Administrasi & Manajemen Data:</strong> Mengelola alur barang masuk/keluar dan pembaruan data harga pada sistem.</li>
-                    <li><strong>Teknisi Perangkat Keras:</strong> Perakitan PC, instalasi Windows, dan pengecekan hardware.</li>
-                    <li><strong>Layanan Pelanggan:</strong> Menangani keluhan pelanggan dan berkoordinasi dengan tim untuk solusi cepat.</li>
+                    <li><strong>Administrasi Data:</strong> Mengelola alur barang masuk/keluar serta data harga sistem.</li>
+                    <li><strong>Teknisi Hardware:</strong> Perakitan PC, instalasi Windows, dan pengecekan hardware.</li>
+                    <li><strong>Customer Service:</strong> Menangani keluhan pelanggan dengan koordinasi solusi cepat.</li>
                 </ul>
             </div>
             <div class="card">
@@ -298,8 +309,7 @@
                 <h4>SMK AD-DA'WAH (2022 - 2023)</h4>
                 <ul>
                     <li>Merencanakan dan mengeksekusi berbagai program kerja serta kegiatan kesiswaan.</li>
-                    <li>Mengasah kemampuan kepemimpinan dan kerja sama tim dalam mengelola acara sekolah.</li>
-                    <li>Membangun komunikasi yang baik antara siswa dan pihak sekolah.</li>
+                    <li>Mengasah kemampuan kepemimpinan dan komunikasi antara siswa dan sekolah.</li>
                 </ul>
             </div>
         </div>
