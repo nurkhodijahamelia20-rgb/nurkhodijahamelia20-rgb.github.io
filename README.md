@@ -1,456 +1,479 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Nur Khodijah Amelia</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>EcoPaws Cafe & Green Living Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #151c2c;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --primary: #38bdf8;
-            --accent: #6366f1;
-            --border-color: #1e293b;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background-color: rgba(11, 15, 25, 0.85);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 85vh;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
-            margin-bottom: 25px;
-            transition: transform 0.3s;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero h3 {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 750px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 32px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: #ffffff;
-            font-weight: 600;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
-        }
-
-        section {
-            padding: 70px 8%;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .card i {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 18px;
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-            color: var(--text-main);
-        }
-
-        .card h4 {
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .card p, .card ul {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .card ul {
-            padding-left: 20px;
-        }
-
-        .card ul li {
-            margin-bottom: 8px;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .skill-badge {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .skill-badge:hover {
-            border-color: var(--primary);
-            background-color: rgba(56, 189, 248, 0.1);
-        }
-
-        /* Galeri Dokumentasi Foto */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            height: 240px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            background: linear-gradient(to top, rgba(11, 15, 25, 0.9), transparent);
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .socials {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .socials a {
-            color: var(--text-main);
-            font-size: 1.8rem;
-            transition: all 0.3s;
-        }
-
-        .socials a:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #070a12;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            header { padding: 15px 5%; }
-            section { padding: 50px 5%; }
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
         }
     </style>
 </head>
-<body>
+<body class="bg-amber-50/40 text-stone-800 antialiased selection:bg-emerald-200">
 
-    <header>
-        <div class="logo">Nur Khodijah Amelia</div>
-        <nav>
-            <a href="#about">Tentang</a>
-            <a href="#education">Pendidikan</a>
-            <a href="#skills">Keahlian</a>
-            <a href="#experience">Pengalaman</a>
-            <a href="#documentation">Dokumentasi</a>
-            <a href="#contact">Kontak</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <img src="profile.jpg" alt="Nur Khodijah Amelia" class="profile-img">
-        <h1>Nur Khodijah Amelia</h1>
-        <h3>S1 Sistem Informasi | Universitas Gunadarma</h3>
-        <p>Mahasiswa aktif Sistem Informasi dengan IPK 3.83. Memiliki kepemimpinan kuat sebagai mantan Ketua OSIS 2 periode, Secretariat General di Generasi Energi Bersih, serta berpengalaman dalam manajemen administrasi, pemrosesan data, hingga kreativitas media (Video & Graphic Editing).</p>
-        <a href="#contact" class="btn">Hubungi Saya</a>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
-            <p>Mahasiswa yang aktif, komunikatif, dan terampil dalam tata kelola organisasi. Berpengalaman memimpin organisasi sekolah 2 periode berturut-turut, memegang posisi Sekretariat Jenderal di organisasi energi bersih, serta berpartisipasi aktif dalam forum nasional & internasional. Memiliki kombinasi keahlian IT (SQL, Java, AI Agent), tata kelola administrasi, serta kemampuan kreatif pembuatan konten media (Video & Photo Editing).</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2 class="section-title">Pendidikan</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h3>Universitas Gunadarma</h3>
-                <h4>S1 Sistem Informasi (2024 - Present)</h4>
-                <p>IPK: 3.83 / 4.00 | Aktif dalam kegiatan akademik dan keorganisasian kampus.</p>
+    <!-- 1. NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-stone-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2" onclick="scrollToSection('about')">
+                <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md cursor-pointer">
+                    🐾
+                </div>
+                <div class="cursor-pointer">
+                    <span class="font-extrabold text-xl tracking-tight text-emerald-900 block leading-none">EcoPaws</span>
+                    <span class="text-[10px] text-amber-700 font-semibold tracking-wider uppercase">Cat Cafe & Eco Hub</span>
+                </div>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-school"></i>
-                <h3>SMK AD-DA'WAH</h3>
-                <h4>Teknik Komputer dan Jaringan (2021 - 2024)</h4>
-                <p>Nilai Rata-rata: 81 / 100 | Dipercaya menjadi Ketua OSIS selama 2 periode (Kelas 10 & 11).</p>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-6 font-semibold text-stone-700 text-sm">
+                <button onclick="scrollToSection('about')" class="hover:text-emerald-700 transition py-1">Tentang Kami</button>
+                <button onclick="scrollToSection('calculator')" class="hover:text-emerald-700 transition py-1">Kalkulator Eco</button>
+                <button onclick="scrollToSection('cats')" class="hover:text-emerald-700 transition py-1">Kucing Kami</button>
+                <button onclick="scrollToSection('menu')" class="hover:text-emerald-700 transition py-1">Menu Cafe</button>
+                <button onclick="scrollToSection('eco-tips')" class="hover:text-emerald-700 transition py-1">Edukasi</button>
+                <button onclick="scrollToSection('booking')" class="hover:text-emerald-700 transition py-1">Reservasi</button>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="scrollToSection('booking')" class="bg-emerald-700 text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded-full hover:bg-emerald-800 transition shadow-md">
+                    Reservasi Meja
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-stone-700 text-xl p-1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
-    </section>
 
-    <section id="skills">
-        <h2 class="section-title">Kemampuan & Keahlian</h2>
-        <div class="skills-container">
-            <span class="skill-badge"><i class="fa-solid fa-file-signature"></i> Secretariat & Administrative Management</span>
-            <span class="skill-badge"><i class="fa-solid fa-crown"></i> Leadership & Strategic Planning</span>
-            <span class="skill-badge"><i class="fa-solid fa-video"></i> Video Editing & Content Creation</span>
-            <span class="skill-badge"><i class="fa-solid fa-image"></i> Graphic Design & Photo Editing</span>
-            <span class="skill-badge"><i class="fa-solid fa-robot"></i> AI Agent Building (IBM)</span>
-            <span class="skill-badge"><i class="fa-solid fa-code"></i> Pemrograman Java & SQL</span>
-            <span class="skill-badge"><i class="fa-solid fa-database"></i> Microsoft Office & Administrasi Data</span>
-            <span class="skill-badge"><i class="fa-solid fa-comments"></i> Public Speaking & Event Management</span>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 py-3 space-y-2 text-sm font-medium">
+            <button onclick="scrollToSection('about'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Tentang Kami</button>
+            <button onclick="scrollToSection('calculator'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Kalkulator Eco</button>
+            <button onclick="scrollToSection('cats'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Kucing Kami 🐱</button>
+            <button onclick="scrollToSection('menu'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Menu Cafe ☕</button>
+            <button onclick="scrollToSection('eco-tips'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Edukasi</button>
+            <button onclick="scrollToSection('booking'); toggleMobileMenu();" class="block w-full text-left py-1 hover:text-emerald-700 font-semibold">Reservasi</button>
         </div>
-    </section>
+    </nav>
 
-    <section id="experience">
-        <h2 class="section-title">Pengalaman Kerja & Organisasi</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-file-signature"></i>
-                <h3>Secretariat General</h3>
-                <h4>Generasi Energi Bersih (Present)</h4>
-                <ul>
-                    <li>Mengelola seluruh administrasi, tata kelola dokumen resmi, serta alur komunikasi internal dan eksternal organisasi.</li>
-                    <li>Menyusun dan mengoordinasikan jadwal rapat, agenda kerja, serta laporan berkala organisasi.</li>
-                    <li>Mendukung kampanye publik dan advokasi transisi energi bersih melalui koordinasi tim dan pengelolaan media digital.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-crown"></i>
-                <h3>Ketua OSIS (2 Periode)</h3>
-                <h4>SMK AD-DA'WAH (2021 - 2023)</h4>
-                <ul>
-                    <li>Dipercaya memimpin seluruh pengurus OSIS selama 2 periode berturut-turut sejak kelas 10 hingga kelas 11.</li>
-                    <li>Mengarahkan, merencanakan, dan mengawasi eksekusi seluruh program kerja kesiswaan dan acara besar sekolah.</li>
-                    <li>Menjadi jembatan komunikasi utama antara seluruh siswa dengan pihak sekolah.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-briefcase"></i>
-                <h3>Praktik Kerja Lapangan (PKL)</h3>
-                <h4>Singa Asia - Harco Mangga Dua (Jan - Apr 2023)</h4>
-                <ul>
-                    <li><strong>Administrasi Data:</strong> Mengelola alur barang masuk/keluar serta data harga sistem.</li>
-                    <li><strong>Teknisi Hardware:</strong> Perakitan PC, instalasi Windows, dan pengecekan hardware.</li>
-                    <li><strong>Customer Service:</strong> Menangani keluhan pelanggan dengan koordinasi solusi cepat.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!-- 2. HERO SECTION -->
+    <section id="about" class="relative py-12 md:py-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold tracking-wide uppercase">
+                    🌱 100% Zero-Waste & Pet Rescue Hub
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 leading-tight">
+                    Bersantai Bareng <span class="text-emerald-700">Anabul</span>, Menjaga <span class="text-amber-600">Bumi</span>.
+                </h1>
+                <p class="text-stone-600 text-base md:text-lg leading-relaxed">
+                    EcoPaws Cafe adalah kafe kucing ramah lingkungan pertama tempat kamu bisa menikmati racikan kopi organik, bersantai dengan kucing-kucing adopsi yang menggemaskan, serta belajar gaya hidup *zero-waste*.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                    <button onclick="scrollToSection('cats')" class="bg-amber-600 text-white font-bold px-6 py-3.5 rounded-full hover:bg-amber-700 transition text-center shadow-md active:scale-95">
+                        Lihat Kucing Adopsi 🐱
+                    </button>
+                    <button onclick="scrollToSection('calculator')" class="border border-stone-300 bg-white text-stone-700 font-bold px-6 py-3.5 rounded-full hover:bg-stone-100 transition text-center active:scale-95">
+                        Hitung Jejak Hijaumu 📊
+                    </button>
+                </div>
 
-    <!-- Galeri Dokumentasi Kegiatan -->
-    <section id="documentation">
-        <h2 class="section-title">Dokumentasi & Kegiatan</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="doc-ccs.jpg" alt="IICCS Forum 2026">
-                <div class="gallery-caption">Delegate - The 4th IICCS Forum 2026</div>
+                <!-- Stats Badge -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-stone-200">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-extrabold text-emerald-800">28+</p>
+                        <p class="text-xs text-stone-500 font-medium">Kucing Teradopsi</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl md:text-3xl font-extrabold text-emerald-800">100%</p>
+                        <p class="text-xs text-stone-500 font-medium">Bahan Organik</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl md:text-3xl font-extrabold text-emerald-800">0 Plastik</p>
+                        <p class="text-xs text-stone-500 font-medium">Komitmen Kami</p>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="doc-idn.jpg" alt="Ngobrol Seru IDN Times">
-                <div class="gallery-caption">Peserta - Ngobrol Seru IDN Times (Subsidi Energi)</div>
-            </div>
-            <div class="gallery-item">
-                <img src="doc-idn2.jpg" alt="Kegiatan Forum Energi">
-                <div class="gallery-caption">Diskusi Ketahanan Energi Bersama IDN Times</div>
+
+            <!-- Hero Image -->
+            <div class="relative flex justify-center pt-4 md:pt-0">
+                <div class="w-full max-w-md h-[320px] md:h-[360px] bg-emerald-700 rounded-3xl p-3 shadow-2xl relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80" alt="Kucing EcoPaws" class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md p-3 rounded-xl text-white text-xs font-semibold text-center">
+                        🐾 Usap layar ke bawah untuk lihat teman-temanku!
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="certifications">
-        <h2 class="section-title">Sertifikasi & Pelatihan</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fa-solid fa-robot"></i>
-                <h3>Build an AI Agent</h3>
-                <p>IBM SkillsBuild (Okt 2026)</p>
+    <!-- 3. INTERACTIVE ECO CALCULATOR -->
+    <section id="calculator" class="py-12 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center space-y-3 mb-8">
+                <span class="text-emerald-300 text-xs font-extrabold uppercase tracking-widest">Kalkulator Interaktif</span>
+                <h2 class="text-3xl font-extrabold">Hitung Dampak Hijau Kunjunganmu</h2>
+                <p class="text-emerald-100 text-xs md:text-sm">Geser slider di bawah ini untuk melihat kontribusimu terhadap lingkungan!</p>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-certificate"></i>
-                <h3>Belajar Dasar Manajemen Proyek</h3>
-                <p>Dicoding Indonesia (Feb 2026)</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-building"></i>
-                <h3>Kunjungan Industri</h3>
-                <p>PT. Primarindo Asia Infrastructure (2023)</p>
+
+            <div class="bg-emerald-800/90 border border-emerald-700 p-6 md:p-8 rounded-3xl shadow-xl grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-2">
+                            <span>Estimasi Kunjungan Per Bulan:</span>
+                            <span id="visit-count" class="text-amber-300 text-sm font-bold">2 kali</span>
+                        </div>
+                        <input type="range" id="visit-slider" min="1" max="10" value="2" class="w-full accent-amber-400 cursor-pointer" oninput="updateImpact()">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-2">
+                            <span>Cangkir Kopi / Minuman per Kunjungan:</span>
+                            <span id="cup-count" class="text-amber-300 text-sm font-bold">2 cangkir</span>
+                        </div>
+                        <input type="range" id="cup-slider" min="1" max="5" value="2" class="w-full accent-amber-400 cursor-pointer" oninput="updateImpact()">
+                    </div>
+                </div>
+
+                <div class="bg-emerald-950/80 p-6 rounded-2xl text-center border border-emerald-800 space-y-4">
+                    <p class="text-xs text-emerald-300 font-semibold uppercase tracking-wider">Dampak Positif Tahunanmu:</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-emerald-900/50 p-3 rounded-xl border border-emerald-800">
+                            <p id="plastic-saved" class="text-2xl font-extrabold text-amber-300">48</p>
+                            <p class="text-[10px] text-stone-300 mt-1">Gelas Plastik Dihemat</p>
+                        </div>
+                        <div class="bg-emerald-900/50 p-3 rounded-xl border border-emerald-800">
+                            <p id="co2-saved" class="text-2xl font-extrabold text-emerald-300">12.0 kg</p>
+                            <p class="text-[10px] text-stone-300 mt-1">Emisi CO2 Dikurangi</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title">Hubungi Saya</h2>
-        <div style="text-align: center;">
-            <p style="color: var(--text-muted); margin-bottom: 10px;">Semanan, Kalideres, Jakarta Barat</p>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">Email: nurkhodijahamelia20@gmail.com | WA: +62 882-1100-7698</p>
-            <div class="socials">
-                <a href="https://github.com/nurkhodijahamelia20-rgb" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:nurkhodijahamelia20@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://wa.me/6288211007698" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- 4. CAT GALLERY SECTION -->
+    <section id="cats" class="py-16 bg-white border-y border-stone-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Galeri Kucing</span>
+                <h2 class="text-3xl font-extrabold text-stone-900">Kucing Kami di EcoPaws</h2>
+                <p class="text-stone-600 text-sm">Klik foto kucing di bawah untuk melihat detail profil dan informasi adopsi!</p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 pt-4">
+                    <button onclick="filterCats(this, 'all')" class="cat-btn bg-emerald-800 text-white px-5 py-2 rounded-full text-xs font-bold shadow cursor-pointer">Semua Kucing</button>
+                    <button onclick="filterCats(this, 'adoptable')" class="cat-btn bg-stone-100 text-stone-700 hover:bg-emerald-100 px-5 py-2 rounded-full text-xs font-bold cursor-pointer">Siap Diadopsi 🏡</button>
+                    <button onclick="filterCats(this, 'resident')" class="cat-btn bg-stone-100 text-stone-700 hover:bg-emerald-100 px-5 py-2 rounded-full text-xs font-bold cursor-pointer">Penghuni Tetap Cafe ☕</button>
+                </div>
+            </div>
+
+            <!-- Cat Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cat Card 1 -->
+                <div onclick="openCatModal('Milo 🧡', 'Domestik Mix', '1.5 Tahun', 'Siap Diadopsi', 'Milo adalah kucing rescue yang sangat ramah dan suka tidur di pangkuan pengunjung. Sudah divaksin lengkap dan steril.', 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80')" class="cat-card adoptable bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 shadow-md hover:shadow-2xl transition duration-300 cursor-pointer transform hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80" alt="Milo" class="w-full h-52 object-cover">
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-extrabold text-stone-900">Milo 🧡</h3>
+                            <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2.5 py-1 rounded-full">Siap Diadopsi</span>
+                        </div>
+                        <p class="text-xs text-stone-500 font-semibold">Ras: Domestik Mix • Umur: 1.5 Tahun</p>
+                        <p class="text-sm text-stone-600">Ramah banget, suka duduk di pangkuan pengunjung saat minum kopi. (Klik foto untuk detail)</p>
+                    </div>
+                </div>
+
+                <!-- Cat Card 2 -->
+                <div onclick="openCatModal('Luna 🤍', 'Persian Rescue', '3 Tahun', 'Penghuni Cafe', 'Luna adalah ratu di cafe kami! Ia diselamatkan dari jalanan dan kini menjadi maskot utama yang suka berjemur matahari.', 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=600&q=80')" class="cat-card resident bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 shadow-md hover:shadow-2xl transition duration-300 cursor-pointer transform hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=600&q=80" alt="Luna" class="w-full h-52 object-cover">
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-extrabold text-stone-900">Luna 🤍</h3>
+                            <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-1 rounded-full">Penghuni Cafe</span>
+                        </div>
+                        <p class="text-xs text-stone-500 font-semibold">Ras: Persian Rescue • Umur: 3 Tahun</p>
+                        <p class="text-sm text-stone-600">Ratu di cafe kami! Suka tidur di dekat jendela sambil berjemur. (Klik foto untuk detail)</p>
+                    </div>
+                </div>
+
+                <!-- Cat Card 3 -->
+                <div onclick="openCatModal('Oreo 🖤', 'Domestic Short Hair', '8 Bulan', 'Siap Diadopsi', 'Oreo sangat lincah, penuh energi, dan senang bermain dengan mainan tali daur ulang.', 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=600&q=80')" class="cat-card adoptable bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 shadow-md hover:shadow-2xl transition duration-300 cursor-pointer transform hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=600&q=80" alt="Oreo" class="w-full h-52 object-cover">
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-extrabold text-stone-900">Oreo 🖤</h3>
+                            <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2.5 py-1 rounded-full">Siap Diadopsi</span>
+                        </div>
+                        <p class="text-xs text-stone-500 font-semibold">Ras: Domestic Short Hair • Umur: 8 Bulan</p>
+                        <p class="text-sm text-stone-600">Sangat aktif dan lincah, selalu siap ngajak kamu main! (Klik foto untuk detail)</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Nur Khodijah Amelia. All rights reserved.</p>
+    <!-- 5. CAFE MENU SECTION -->
+    <section id="menu" class="py-16 bg-amber-50/60">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-emerald-800 font-extrabold text-xs uppercase tracking-widest">Organik & Zero Waste</span>
+                <h2 class="text-3xl font-extrabold text-stone-900">Menu Kafe Ramah Lingkungan</h2>
+                <p class="text-stone-600 text-sm">Semua minuman dan makanan dibuat dari bahan lokal organik dengan kemasan 100% ramah lingkungan.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Item 1 -->
+                <div onclick="alert('🍵 Matcha Oat Latte: Dibuat dari Matcha Uji Organik & Susu Oat Lokal!')" class="bg-white p-5 rounded-2xl border border-stone-200 flex justify-between items-center shadow-sm cursor-pointer hover:border-emerald-500 transition">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-extrabold text-stone-800 text-base">Matcha Oat Latte 🍵</h4>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Best Seller</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Matcha Jepang organik + Susu Oat lokal ramah lingkungan</p>
+                    </div>
+                    <span class="font-extrabold text-emerald-900 text-lg">Rp 32k</span>
+                </div>
+
+                <!-- Item 2 -->
+                <div onclick="alert('☕ Espresso Paw-ccino: Espresso houseblend dengan art tapak kucing lucu!')" class="bg-white p-5 rounded-2xl border border-stone-200 flex justify-between items-center shadow-sm cursor-pointer hover:border-emerald-500 transition">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-extrabold text-stone-800 text-base">Espresso Paw-ccino ☕</h4>
+                            <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">Eco-Bean</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Kopi Houseblend dengan foam art bentuk tapak kaki kucing</p>
+                    </div>
+                    <span class="font-extrabold text-emerald-900 text-lg">Rp 28k</span>
+                </div>
+
+                <!-- Item 3 -->
+                <div onclick="alert('🥐 Plant-Based Croissant: 100% bahan nabati renyah dan sehat!')" class="bg-white p-5 rounded-2xl border border-stone-200 flex justify-between items-center shadow-sm cursor-pointer hover:border-emerald-500 transition">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-extrabold text-stone-800 text-base">Plant-Based Croissant 🥐</h4>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Vegan</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Croissant renyah mentega nabati dengan komposting sisa bahan</p>
+                    </div>
+                    <span class="font-extrabold text-emerald-900 text-lg">Rp 25k</span>
+                </div>
+
+                <!-- Item 4 -->
+                <div onclick="alert('🌼 Herbal Chamomile Tea: Teh daun utuh organik penyegar pikiran!')" class="bg-white p-5 rounded-2xl border border-stone-200 flex justify-between items-center shadow-sm cursor-pointer hover:border-emerald-500 transition">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-extrabold text-stone-800 text-base">Herbal Chamomile Tea 🌼</h4>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Organic</span>
+                        </div>
+                        <p class="text-xs text-stone-500">Teh penenang stres disajikan dengan teko kaca daur ulang</p>
+                    </div>
+                    <span class="font-extrabold text-emerald-900 text-lg">Rp 24k</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ECO LIVING TIPS SECTION -->
+    <section id="eco-tips" class="py-16 bg-emerald-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-emerald-300 font-bold text-xs uppercase tracking-widest">Edukasi Ramah Lingkungan</span>
+                <h2 class="text-3xl font-extrabold">Aksi Hijau untuk Pecinta Hewan</h2>
+                <p class="text-emerald-100 text-sm">Beberapa tips sederhana merawat anabul kamu tanpa mengotori bumi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-emerald-800/80 p-6 rounded-2xl border border-emerald-700 space-y-3">
+                    <div class="text-3xl">🌾</div>
+                    <h3 class="text-lg font-bold text-emerald-200">Pakai Pasir Kucing Organik</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Gunakan pasir berbasis tahu (*soya litter*) atau kayu yang bisa diurai tanah (*biodegradable*) dibanding pasir tanah liat biasa.</p>
+                </div>
+
+                <div class="bg-emerald-800/80 p-6 rounded-2xl border border-emerald-700 space-y-3">
+                    <div class="text-3xl">🧶</div>
+                    <h3 class="text-lg font-bold text-emerald-200">Daur Ulang Mainan Kucing</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Buat mainan dari kardus bekas atau kain perca. Kucing lebih suka kardus sederhana dibanding mainan plastik mahal!</p>
+                </div>
+
+                <div class="bg-emerald-800/80 p-6 rounded-2xl border border-emerald-700 space-y-3">
+                    <div class="text-3xl">🍲</div>
+                    <h3 class="text-lg font-bold text-emerald-200">Wadah Makan Stainless/Kaca</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Gunakan tempat makan bahan stainless steel atau keramik agar tahan lama dan tidak meninggalkan limbah mikroplastik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. RESERVATION FORM -->
+    <section id="booking" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-stone-50 border border-stone-200 p-8 rounded-3xl shadow-lg space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl font-extrabold text-stone-900">Reservasi Kunjungan Meja</h2>
+                    <p class="text-xs text-stone-500">Pilih tanggal dan waktu kunjungan untuk bermain bersama kucing-kucing kami.</p>
+                </div>
+
+                <form onsubmit="handleBooking(event)" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="res-name" required placeholder="Masukkan nama kamu" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Nomor WhatsApp</label>
+                            <input type="tel" id="res-phone" required placeholder="0812xxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Jumlah Tamu</label>
+                            <select id="res-guests" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                                <option>1 Orang</option>
+                                <option>2 Orang</option>
+                                <option>3-4 Orang</option>
+                                <option>Rombongan (>5 Orang)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Tanggal Kunjungan</label>
+                            <input type="date" id="res-date" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Sesi Jam</label>
+                            <select id="res-time" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+                                <option>Sesi 1 (10:00 - 12:00)</option>
+                                <option>Sesi 2 (13:00 - 15:00)</option>
+                                <option>Sesi 3 (16:00 - 18:00)</option>
+                                <option>Sesi 4 (19:00 - 21:00)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-emerald-700 text-white font-bold py-3 rounded-xl hover:bg-emerald-800 transition shadow-md cursor-pointer">
+                        Konfirmasi Reservasi Meja ✨
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CAT POPUP MODAL -->
+    <div id="cat-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white max-w-md w-full rounded-3xl overflow-hidden shadow-2xl space-y-4 p-6 relative">
+            <button onclick="closeCatModal()" class="absolute top-4 right-4 bg-stone-100 hover:bg-stone-200 text-stone-700 w-8 h-8 rounded-full font-bold">✕</button>
+            <img id="modal-img" src="" class="w-full h-52 object-cover rounded-2xl">
+            <div>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 id="modal-title" class="text-2xl font-extrabold text-stone-900"></h3>
+                    <span id="modal-status" class="text-xs font-bold px-3 py-1 rounded-full"></span>
+                </div>
+                <p id="modal-sub" class="text-xs text-stone-500 mb-3 font-semibold"></p>
+                <p id="modal-desc" class="text-sm text-stone-600 leading-relaxed"></p>
+            </div>
+            <button onclick="alert('🐾 Pengajuan adopsi terkirim! Tim kami akan menghubungi kamu.'); closeCatModal();" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 rounded-xl transition cursor-pointer">
+                Ajukan Adopsi Anabul Ini 🏡
+            </button>
+        </div>
+    </div>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-10 border-t border-stone-800 text-xs text-center">
+        <div class="max-w-6xl mx-auto px-4 space-y-4">
+            <div class="flex justify-center items-center gap-2 text-white font-bold text-base">
+                🐾 EcoPaws Cafe
+            </div>
+            <p>Jl. Green Campus No. 12, Depok • Buka Setiap Hari (10:00 - 21:00 WIB)</p>
+            <p class="text-stone-600">© 2026 EcoPaws Cat Cafe & Green Living Hub. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <!-- JavaScript For Interactivity -->
+    <script>
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function filterCats(btnElement, category) {
+            const cards = document.querySelectorAll('.cat-card');
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emerald-800', 'text-white');
+                btn.classList.add('bg-stone-100', 'text-stone-700');
+            });
+            
+            btnElement.classList.remove('bg-stone-100', 'text-stone-700');
+            btnElement.classList.add('bg-emerald-800', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function updateImpact() {
+            const visits = parseInt(document.getElementById('visit-slider').value);
+            const cups = parseInt(document.getElementById('cup-slider').value);
+
+            document.getElementById('visit-count').innerText = visits + " kali";
+            document.getElementById('cup-count').innerText = cups + " cangkir";
+
+            const totalCupsYear = visits * cups * 12;
+            const co2SavedKg = (totalCupsYear * 0.25).toFixed(1);
+
+            document.getElementById('plastic-saved').innerText = totalCupsYear;
+            document.getElementById('co2-saved').innerText = co2SavedKg + " kg";
+        }
+
+        function openCatModal(name, breed, age, status, desc, img) {
+            document.getElementById('modal-title').innerText = name;
+            document.getElementById('modal-sub').innerText = "Ras: " + breed + " • Umur: " + age;
+            document.getElementById('modal-status').innerText = status;
+            document.getElementById('modal-status').className = "text-xs font-bold px-3 py-1 rounded-full " + (status === 'Siap Diadopsi' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800');
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-img').src = img;
+            document.getElementById('cat-modal').classList.remove('hidden');
+        }
+
+        function closeCatModal() {
+            document.getElementById('cat-modal').classList.add('hidden');
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            const name = document.getElementById('res-name').value;
+            const date = document.getElementById('res-date').value;
+            alert('🎉 Terima kasih ' + name + '!\nReservasi meja kamu untuk tanggal ' + date + ' telah berhasil dikonfirmasi.');
+        }
+    </script>
 </body>
 </html>
+          
+
